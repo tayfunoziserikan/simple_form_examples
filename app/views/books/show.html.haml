@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%p
+  %b Category:
+  = @book.category.try(:name)
+
+%p
+  %b Name:
+  = @book.name
+%p
+  %b Isbn:
+  = @book.isbn
+%p
+  %b About:
+  = @book.about
+%p
+  %b Active:
+  = @book.active
+%p
+  %b Release:
+  = @book.release
+
+= link_to 'Edit', edit_book_path(@book)
+\|
+= link_to 'Back', books_path
