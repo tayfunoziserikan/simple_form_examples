@@ -18,8 +18,8 @@
       %td= book.name
       %td= book.isbn
       %td= book.about
-      %td= book.active
-      %td= book.release
+      %td= book.active ? 'Yes' : 'No'
+      %td= l book.release
       %td= link_to 'Show', book
       %td= link_to 'Edit', edit_book_path(book)
       %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
